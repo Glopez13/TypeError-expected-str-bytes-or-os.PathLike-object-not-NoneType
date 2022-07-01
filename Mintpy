@@ -1,0 +1,60 @@
+(mintpy) root@ovsicori-VirtualBox:/glo/i/2021/DES/RincondelaVieja/mintpy2# smallbaselineApp.py /root/tools/MintPy/mintpy/data/input_files/RINCON2021DES.txt 
+
+___________________________________________________________
+
+  /##      /## /##             /##     /#######           
+ | ###    /###|__/            | ##    | ##__  ##          
+ | ####  /#### /## /#######  /######  | ##  \ ## /##   /##
+ | ## ##/## ##| ##| ##__  ##|_  ##_/  | #######/| ##  | ##
+ | ##  ###| ##| ##| ##  \ ##  | ##    | ##____/ | ##  | ##
+ | ##\  # | ##| ##| ##  | ##  | ## /##| ##      | ##  | ##
+ | ## \/  | ##| ##| ##  | ##  |  ####/| ##      |  #######
+ |__/     |__/|__/|__/  |__/   \___/  |__/       \____  ##
+                                                 /##  | ##
+                                                |  ######/
+   Miami InSAR Time-series software in Python    \______/ 
+          MintPy v1.3.3-29, 2022-06-30
+___________________________________________________________
+
+--RUN-at-2022-06-30 21:32:07.286907--
+Current directory: /glo/i/2021/DES/RincondelaVieja/mintpy2
+Run routine processing with smallbaselineApp.py on steps: ['load_data', 'modify_network', 'reference_point', 'quick_overview', 'correct_unwrap_error', 'invert_network', 'correct_LOD', 'correct_SET', 'correct_troposphere', 'deramp', 'correct_topography', 'residual_RMS', 'reference_date', 'velocity', 'geocode', 'google_earth', 'hdfeos5']
+Remaining steps: ['modify_network', 'reference_point', 'quick_overview', 'correct_unwrap_error', 'invert_network', 'correct_LOD', 'correct_SET', 'correct_troposphere', 'deramp', 'correct_topography', 'residual_RMS', 'reference_date', 'velocity', 'geocode', 'google_earth', 'hdfeos5']
+--------------------------------------------------
+Project name: RINCON2021DES
+Go to work directory: /glo/i/OneDrive - Universidad Nacional de Costa Rica/ovsicori/2021/DES/RincondelaVieja/mintpy2
+read custom template file: /root/tools/MintPy/mintpy/data/input_files/RINCON2021DES.txt
+update default template based on input custom template
+No new option value found, skip updating /glo/i/2021/DES/RincondelaVieja/mintpy2/smallbaselineApp.cfg
+copy RINCON2021DES.txt    to inputs   directory for backup.
+copy smallbaselineApp.cfg to inputs   directory for backup.
+copy RINCON2021DES.txt    to pic      directory for backup.
+copy smallbaselineApp.cfg to pic      directory for backup.
+read default template file: /glo/i/2021/DES/RincondelaVieja/mintpy2/smallbaselineApp.cfg
+
+
+******************** step - load_data ********************
+
+load_data.py --template /glo/i/2021/DES/RincondelaVieja/mintpy2/smallbaselineApp.cfg /root/tools/MintPy/mintpy/data/input_files/RINCON2021DES.txt --project RINCON2021DES
+processor : isce
+SAR platform/sensor : unknown from project name "RINCON2021DES"
+--------------------------------------------------
+prepare metadata files for isce products
+Traceback (most recent call last):
+  File "/root/tools/MintPy/mintpy/smallbaselineApp.py", line 1301, in <module>
+    main(sys.argv[1:])
+  File "/root/tools/MintPy/mintpy/smallbaselineApp.py", line 1283, in main
+    app.run(steps=inps.runSteps)
+  File "/root/tools/MintPy/mintpy/smallbaselineApp.py", line 1039, in run
+    self.run_load_data(sname)
+  File "/root/tools/MintPy/mintpy/smallbaselineApp.py", line 354, in run_load_data
+    mintpy.load_data.main(iargs)
+  File "/root/tools/MintPy/mintpy/load_data.py", line 895, in main
+    prepare_metadata(iDict)
+  File "/root/tools/MintPy/mintpy/load_data.py", line 765, in prepare_metadata
+    geom_files = [os.path.basename(iDict[key]) for key in geom_keys
+  File "/root/tools/MintPy/mintpy/load_data.py", line 765, in <listcomp>
+    geom_files = [os.path.basename(iDict[key]) for key in geom_keys
+  File "/root/tools/miniconda3/envs/mintpy/lib/python3.10/posixpath.py", line 142, in basename
+    p = os.fspath(p)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
